@@ -1,2 +1,32 @@
 @import "./base.css";
 @import "tailwindcss";
+
+@layer utilities {
+  .default-label {
+    @apply block text-base mb-2 font-semibold;
+  }
+  .default-input {
+    @apply outline-none w-full placeholder:text-[#6B6B6B] placeholder:text-sm placeholder:font-normal text-[#6B6B6B] p-3 bg-[#0e1111];
+  }
+  .input-container {
+    @apply rounded-lg w-[100%] bg-[#0e1111] flex items-center gap-1 px-2 shadow-[#6B6B6B];
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px #0e1111 inset !important;
+  box-shadow: 0 0 0 1000px #0e1111 inset !important;
+  -webkit-text-fill-color: #6b6b6b !important;
+  transition: background-color 9999s ease-out 0s !important;
+}
+
+hr {
+  border-top: 1px solid #ffffff30;
+}
+
+.test-class {
+  letter-spacing: -3.2px;
+}
